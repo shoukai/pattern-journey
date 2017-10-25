@@ -54,5 +54,6 @@
     </build>
     <modules>
         <module>reactor</module>
+        <module>native</module>
     </modules>
 </project>
