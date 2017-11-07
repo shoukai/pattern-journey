@@ -9,7 +9,6 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 /**
- * nio 客户端 Created by david.zhang
  * https://zsr.github.io/2016/08/02/Java-Nio-demo/
  */
 public class NIOClient {
