@@ -56,5 +56,6 @@
         <module>reactor</module>
         <module>native</module>
         <module>singleton</module>
+        <module>factory-method</module>
     </modules>
 </project>
