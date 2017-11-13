@@ -40,5 +40,7 @@
 
 ### 参考
 
-* [单例模式（Singleton）](http://www.cnblogs.com/meet/p/5116398.html)
+* [Java23种设计模式学习笔记](http://www.cnblogs.com/meet/p/5116504.html)
 * [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
+
+
