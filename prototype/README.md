@@ -24,3 +24,8 @@ protected native Object clone() throws CloneNotSupportedException;
 * 浅克隆：copy该对象，然后保留该对象原有的引用。也就是说不克隆该对象的属性。
 
 * 深克隆：copy该对象，并且把该对象的所有属性也克隆出一份新的。
+
+### 参考
+
+* [Java23种设计模式学习笔记](http://www.cnblogs.com/meet/p/5116504.html)
+* [java-design-patterns](https://github.com/iluwatar/java-design-patterns)

@@ -58,5 +58,8 @@
         <module>abstract-factory</module>
         <module>builder</module>
         <module>prototype</module>
+        <module>template-method</module>
+        <module>command</module>
+        <module>iterator</module>
     </modules>
 </project>
