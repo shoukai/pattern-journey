@@ -61,5 +61,6 @@
         <module>template-method</module>
         <module>command</module>
         <module>iterator</module>
+        <module>observer</module>
     </modules>
 </project>
