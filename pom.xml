@@ -62,5 +62,12 @@
         <module>command</module>
         <module>iterator</module>
         <module>observer</module>
+        <module>mediator</module>
+        <module>memento</module>
+        <module>interpreter</module>
+        <module>state</module>
+        <module>strategy</module>
+        <module>chain</module>
+        <module>visitor</module>
     </modules>
 </project>
