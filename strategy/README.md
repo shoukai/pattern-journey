@@ -25,5 +25,5 @@ dragonSlayer.goToBattle();
 
 ### 参考
 
-* [设计模式](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
+* [Java23种设计模式学习笔记](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
 * [java-design-patterns](https://github.com/iluwatar/java-design-patterns)

@@ -30,5 +30,5 @@ Context（上下文）：维护一个State子类状态的实例，这个实例�
 
 ### 参考
 
-* [设计模式](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
+* [Java23种设计模式学习笔记](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
 * [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
