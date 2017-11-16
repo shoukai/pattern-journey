@@ -15,5 +15,9 @@ NBA中的球员来自不同国家，而世界标准语言是英语。那他们�
 
 2、对象适配器模式：采用组合的方式
 
+### 参考
+
+* [Java23种设计模式学习笔记](http://www.cnblogs.com/meet/p/5116504.html)
+* [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
 
 

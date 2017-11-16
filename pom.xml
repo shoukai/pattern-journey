@@ -70,5 +70,7 @@
         <module>chain</module>
         <module>visitor</module>
         <module>adapter</module>
+        <module>bridge</module>
+        <module>decorator</module>
     </modules>
 </project>

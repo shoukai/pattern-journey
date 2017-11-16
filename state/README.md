@@ -27,3 +27,8 @@ Context（上下文）：维护一个State子类状态的实例，这个实例�
 ### 什么时候使用状态模式呢？
 
 当一个对象的行为取决于它的状态，并且它必须在运行时刻根据状态改变它的行为时，就可以考虑使用状态模式了。
+
+### 参考
+
+* [设计模式](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
+* [java-design-patterns](https://github.com/iluwatar/java-design-patterns)

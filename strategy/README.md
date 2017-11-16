@@ -22,3 +22,8 @@ dragonSlayer.goToBattle();
 dragonSlayer.changeStrategy(() -> LOGGER.info("You cast the spell of disintegration and the dragon vaporizes in a pile of dust!"));
 dragonSlayer.goToBattle();
 ```
+
+### 参考
+
+* [设计模式](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
+* [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
