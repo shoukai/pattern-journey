@@ -69,5 +69,6 @@
         <module>strategy</module>
         <module>chain</module>
         <module>visitor</module>
+        <module>adapter</module>
     </modules>
 </project>
