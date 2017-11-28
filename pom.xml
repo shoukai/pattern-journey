@@ -76,5 +76,6 @@
         <module>facade</module>
         <module>flyweight</module>
         <module>proxy</module>
+        <module>inverted-index</module>
     </modules>
 </project>
