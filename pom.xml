@@ -77,5 +77,6 @@
         <module>flyweight</module>
         <module>proxy</module>
         <module>inverted-index</module>
+        <module>async-method-invocation</module>
     </modules>
 </project>
