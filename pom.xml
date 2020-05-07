@@ -78,5 +78,6 @@
         <module>proxy</module>
         <module>inverted-index</module>
         <module>async-method-invocation</module>
+        <module>balking</module>
     </modules>
 </project>
