@@ -79,5 +79,6 @@
         <module>inverted-index</module>
         <module>async-method-invocation</module>
         <module>balking</module>
+        <module>event-queue</module>
     </modules>
 </project>
