@@ -80,5 +80,6 @@
         <module>async-method-invocation</module>
         <module>balking</module>
         <module>event-queue</module>
+        <module>guarded-suspension</module>
     </modules>
 </project>
