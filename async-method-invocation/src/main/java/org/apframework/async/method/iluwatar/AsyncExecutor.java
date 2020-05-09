@@ -20,36 +20,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.iluwatar;
+package org.apframework.async.method.iluwatar;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
 /**
- * AsyncResult interface
- * @param <T> parameter returned when getValue is invoked
+ *
+ * AsyncExecutor interface
+ *
  */
-public interface AsyncResult<T> {
+public interface AsyncExecutor {
 
     /**
-     * Status of the async task execution.
+     * Starts processing of an async task. Returns immediately with async result.
      *
-     * @return <code>true</code> if execution is completed or failed
+     * @param task task to be executed asynchronously
+     * @return async result for the task
      */
-    boolean isCompleted();
+    <T> AsyncResult<T> startProcess(Callable<T> task);
 
     /**
-     * Gets the value of completed async task.
+     * Starts processing of an async task. Returns immediately with async result. Executes callback
+     * when the task is completed.
      *
-     * @return evaluated value or throws ExecutionException if execution has failed
+     * @param task task to be executed asynchronously
+     * @param callback callback to be executed on task completion
+     * @return async result for the task
+     */
+    <T> AsyncResult<T> startProcess(Callable<T> task, AsyncCallback<T> callback);
+
+    /**
+     * Ends processing of an async task. Blocks the current thread if necessary and returns the
+     * evaluated value of the completed task.
+     *
+     * @param asyncResult async result of a task
+     * @return evaluated value of the completed task
      * @throws ExecutionException if execution has failed, containing the root cause
-     * @throws IllegalStateException if execution is not completed
-     */
-    T getValue() throws ExecutionException;
-
-    /**
-     * Blocks the current thread until the async task is completed.
-     *
      * @throws InterruptedException if the execution is interrupted
      */
-    void await() throws InterruptedException;
+    <T> T endProcess(AsyncResult<T> asyncResult) throws ExecutionException, InterruptedException;
 }

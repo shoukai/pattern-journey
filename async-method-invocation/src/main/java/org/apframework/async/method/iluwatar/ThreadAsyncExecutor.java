@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.iluwatar;
+package org.apframework.async.method.iluwatar;
 
 import java.util.Optional;
 import java.util.concurrent.Callable;
