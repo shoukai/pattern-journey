@@ -81,5 +81,6 @@
         <module>balking</module>
         <module>event-queue</module>
         <module>guarded-suspension</module>
+        <module>producer-consumer</module>
     </modules>
 </project>
