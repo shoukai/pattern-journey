@@ -82,5 +82,6 @@
         <module>event-queue</module>
         <module>guarded-suspension</module>
         <module>producer-consumer</module>
+        <module>mutex</module>
     </modules>
 </project>
