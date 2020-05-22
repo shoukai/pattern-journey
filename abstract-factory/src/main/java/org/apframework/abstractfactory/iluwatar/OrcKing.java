@@ -20,25 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory;
+package org.apframework.abstractfactory.iluwatar;
 
 /**
  * 
- * ElfKingdomFactory concrete factory.
- * 
+ * OrcKing
+ *
  */
-public class ElfKingdomFactory implements KingdomFactory {
+public class OrcKing implements King {
 
-  public Castle createCastle() {
-    return new ElfCastle();
+  static final String DESCRIPTION = "This is the Orc king!";
+
+  @Override
+  public String getDescription() {
+    return DESCRIPTION;
   }
-
-  public King createKing() {
-    return new ElfKing();
-  }
-
-  public Army createArmy() {
-    return new ElfArmy();
-  }
-
 }

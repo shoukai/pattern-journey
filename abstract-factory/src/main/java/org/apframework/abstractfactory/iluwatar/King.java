@@ -20,19 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory;
+package org.apframework.abstractfactory.iluwatar;
 
 /**
  * 
- * OrcKing
+ * King interface
  *
  */
-public class OrcKing implements King {
+public interface King {
 
-  static final String DESCRIPTION = "This is the Orc king!";
-
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
-  }
+  String getDescription();
 }

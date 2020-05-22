@@ -20,19 +20,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory;
+package org.apframework.abstractfactory.iluwatar;
 
 /**
  * 
- * KingdomFactory factory interface.
+ * ElfKingdomFactory concrete factory.
  * 
  */
-public interface KingdomFactory {
+public class ElfKingdomFactory implements KingdomFactory {
 
-  Castle createCastle();
+  public Castle createCastle() {
+    return new ElfCastle();
+  }
 
-  King createKing();
+  public King createKing() {
+    return new ElfKing();
+  }
 
-  Army createArmy();
+  public Army createArmy() {
+    return new ElfArmy();
+  }
 
 }

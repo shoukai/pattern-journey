@@ -20,14 +20,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory;
+package org.apframework.abstractfactory.iluwatar;
 
 /**
  * 
- * Castle interface
- *
+ * OrcKingdomFactory concrete factory.
+ * 
  */
-public interface Castle {
+public class OrcKingdomFactory implements KingdomFactory {
 
-  String getDescription();
+  public Castle createCastle() {
+    return new OrcCastle();
+  }
+
+  public King createKing() {
+    return new OrcKing();
+  }
+
+  public Army createArmy() {
+    return new OrcArmy();
+  }
 }

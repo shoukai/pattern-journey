@@ -20,14 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory;
+package org.apframework.abstractfactory.iluwatar;
 
 /**
  * 
- * Army interface
+ * ElfArmy
  *
  */
-public interface Army {
+public class ElfArmy implements Army {
 
-  String getDescription();
+  static final String DESCRIPTION = "This is the Elven Army!";
+
+  @Override
+  public String getDescription() {
+    return DESCRIPTION;
+  }
 }
