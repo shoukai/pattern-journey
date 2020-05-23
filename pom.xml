@@ -50,12 +50,12 @@
             </plugin>
         </plugins>
     </build>
+
     <modules>
+        <module>creational-patterns</module>
         <module>reactor</module>
         <module>native</module>
         <module>singleton</module>
-        <module>factory-method</module>
-        <module>abstract-factory</module>
         <module>builder</module>
         <module>prototype</module>
         <module>template-method</module>
