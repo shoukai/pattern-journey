@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.singleton;
+package org.apframework.singleton.iluwatar;
 
 /**
  * Singleton class. Eagerly initialized static instance guarantees thread safety.

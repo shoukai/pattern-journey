@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.singleton;
+package org.apframework.singleton.iluwatar;
 
 /**
  * Thread-safe Singleton class. The instance is lazily initialized and thus needs synchronization

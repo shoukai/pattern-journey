@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.singleton;
+package org.apframework.singleton.iluwatar;
 
 /**
  * Enum based singleton implementation. Effective Java 2nd Edition (Joshua Bloch) p. 18

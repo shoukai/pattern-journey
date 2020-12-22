@@ -1,4 +1,4 @@
-package org.apframework.singleton;
+package org.apframework.singleton.ap;
 
 public final class Singleton {
 
