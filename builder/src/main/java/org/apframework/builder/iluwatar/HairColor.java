@@ -20,19 +20,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.builder;
+package org.apframework.builder.iluwatar;
 
 /**
  *
- * Weapon enumeration
+ * HairColor enumeration
  *
  */
-public enum Weapon {
+public enum HairColor {
 
-    DAGGER, SWORD, AXE, WARHAMMER, BOW;
+    WHITE, BLOND, RED, BROWN, BLACK;
 
     @Override
     public String toString() {
         return name().toLowerCase();
     }
+
 }
