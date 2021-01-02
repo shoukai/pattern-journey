@@ -20,26 +20,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.prototype;
+package org.apframework.prototype.iluwatar;
 
 /**
  *
- * ElfWarlord
+ * OrcWarlord
  *
  */
-public class ElfWarlord extends Warlord {
+public class OrcWarlord extends Warlord {
 
-    public ElfWarlord() {
+    public OrcWarlord() {
     }
 
     @Override
     public Warlord clone() throws CloneNotSupportedException {
-        return new ElfWarlord();
+        return new OrcWarlord();
     }
 
     @Override
     public String toString() {
-        return "Elven warlord";
+        return "Orcish warlord";
     }
 
 }

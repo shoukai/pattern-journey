@@ -20,16 +20,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.prototype;
+package org.apframework.prototype.iluwatar;
 
 /**
  *
- * Beast
+ * ElfBeast
  *
  */
-public abstract class Beast extends Prototype {
+public class ElfBeast extends Beast {
+
+    public ElfBeast() {
+    }
 
     @Override
-    public abstract Beast clone() throws CloneNotSupportedException;
+    public Beast clone() throws CloneNotSupportedException {
+        return new ElfBeast();
+    }
+
+    @Override
+    public String toString() {
+        return "Elven eagle";
+    }
 
 }

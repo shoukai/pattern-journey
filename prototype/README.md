@@ -1,5 +1,9 @@
 # 原型模式介绍
 
+意图：用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
+
+主要解决：在运行期建立和删除原型。
+
 ### 原型模式：
 
 原型模式就是从一个对象再创建另外一个可定制的对象，而且不需要知道任何创建的细节。
@@ -29,3 +33,4 @@ protected native Object clone() throws CloneNotSupportedException;
 
 * [Java23种设计模式学习笔记](http://www.cnblogs.com/meet/p/5116504.html)
 * [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
+* [原型模式](https://www.runoob.com/design-pattern/prototype-pattern.html)
