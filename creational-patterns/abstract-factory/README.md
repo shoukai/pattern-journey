@@ -54,7 +54,7 @@
 
 ### 实现
 
-![](http://skblog.duiduiche.com/fd1810c243b10efdd8b2f2df37eeb9c5.jpg)
+![](http://cdn.apframework.com/fd1810c243b10efdd8b2f2df37eeb9c5.jpg)
 
 ### 参考
 
