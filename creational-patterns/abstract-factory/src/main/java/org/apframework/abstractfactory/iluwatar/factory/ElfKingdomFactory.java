@@ -20,24 +20,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory.iluwatar;
+package org.apframework.abstractfactory.iluwatar.factory;
+
+import org.apframework.abstractfactory.iluwatar.Army;
+import org.apframework.abstractfactory.iluwatar.Castle;
+import org.apframework.abstractfactory.iluwatar.King;
+import org.apframework.abstractfactory.iluwatar.KingdomFactory;
+import org.apframework.abstractfactory.iluwatar.army.ElfArmy;
+import org.apframework.abstractfactory.iluwatar.castle.ElfCastle;
+import org.apframework.abstractfactory.iluwatar.king.ElfKing;
 
 /**
  * 
- * OrcKingdomFactory concrete factory.
+ * ElfKingdomFactory concrete factory.
  * 
  */
-public class OrcKingdomFactory implements KingdomFactory {
+public class ElfKingdomFactory implements KingdomFactory {
 
   public Castle createCastle() {
-    return new OrcCastle();
+    return new ElfCastle();
   }
 
   public King createKing() {
-    return new OrcKing();
+    return new ElfKing();
   }
 
   public Army createArmy() {
-    return new OrcArmy();
+    return new ElfArmy();
   }
+
 }

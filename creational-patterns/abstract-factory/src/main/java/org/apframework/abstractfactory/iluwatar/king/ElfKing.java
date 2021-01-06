@@ -20,16 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.abstractfactory.iluwatar;
+package org.apframework.abstractfactory.iluwatar.king;
+
+import org.apframework.abstractfactory.iluwatar.King;
 
 /**
  * 
- * OrcCastle
+ * ElfKing
  *
  */
-public class OrcCastle implements Castle {
+public class ElfKing implements King {
 
-  static final String DESCRIPTION = "This is the Orc castle!";
+  static final String DESCRIPTION = "This is the Elven king!";
 
   @Override
   public String getDescription() {

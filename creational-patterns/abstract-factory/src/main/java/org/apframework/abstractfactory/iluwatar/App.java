@@ -22,6 +22,8 @@
  */
 package org.apframework.abstractfactory.iluwatar;
 
+import org.apframework.abstractfactory.iluwatar.factory.ElfKingdomFactory;
+import org.apframework.abstractfactory.iluwatar.factory.OrcKingdomFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
