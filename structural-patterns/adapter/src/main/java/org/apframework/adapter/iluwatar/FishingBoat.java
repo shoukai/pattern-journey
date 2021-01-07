@@ -20,24 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.adapter;
+package org.apframework.adapter.iluwatar;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
- * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
- * interface expected by the client ({@link Captain}).
+ * Device class (adaptee in the pattern). We want to reuse this class.
+ * Fishing boat moves by sailing.
  *
  */
-public class FishingBoatAdapter implements RowingBoat {
+public class FishingBoat {
 
-    private FishingBoat boat;
+    private static final Logger LOGGER = LoggerFactory.getLogger(FishingBoat.class);
 
-    public FishingBoatAdapter() {
-        boat = new FishingBoat();
+    public void sail() {
+        LOGGER.info("The fishing boat is sailing");
     }
 
-    @Override
-    public void row() {
-        boat.sail();
-    }
 }

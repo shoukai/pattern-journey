@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.adapter;
+package org.apframework.adapter.iluwatar;
 
 /**
  * An adapter helps two incompatible interfaces to work together. This is the real world definition

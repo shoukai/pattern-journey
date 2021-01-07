@@ -20,30 +20,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.adapter;
+package org.apframework.adapter.iluwatar;
 
 /**
- * The Captain uses {@link RowingBoat} to sail. <br>
- * This is the client in the pattern.
+ * The interface expected by the client.<br>
+ * A rowing boat is rowed to move.
+ *
  */
-public class Captain implements RowingBoat {
+public interface RowingBoat {
 
-    private RowingBoat rowingBoat;
-
-    public Captain() {
-    }
-
-    public Captain(RowingBoat rowingBoat) {
-        this.rowingBoat = rowingBoat;
-    }
-
-    public void setRowingBoat(RowingBoat rowingBoat) {
-        this.rowingBoat = rowingBoat;
-    }
-
-    @Override
-    public void row() {
-        rowingBoat.row();
-    }
+    void row();
 
 }

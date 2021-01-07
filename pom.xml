@@ -53,11 +53,10 @@
 
     <modules>
         <module>creational-patterns</module>
+        <module>structural-patterns</module>
+
         <module>reactor</module>
         <module>native</module>
-        <module>singleton</module>
-        <module>builder</module>
-        <module>prototype</module>
         <module>template-method</module>
         <module>command</module>
         <module>iterator</module>
@@ -69,7 +68,6 @@
         <module>strategy</module>
         <module>chain</module>
         <module>visitor</module>
-        <module>adapter</module>
         <module>bridge</module>
         <module>decorator</module>
         <module>composite</module>
@@ -83,5 +81,6 @@
         <module>guarded-suspension</module>
         <module>producer-consumer</module>
         <module>mutex</module>
+
     </modules>
 </project>
