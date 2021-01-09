@@ -20,41 +20,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.bridge;
+package org.apframework.bridge.iluwatar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  *
- * Hammer
+ * Sword
  *
  */
-public class Hammer implements Weapon {
+public class Sword implements Weapon {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Hammer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Sword.class);
 
     private final Enchantment enchantment;
 
-    public Hammer(Enchantment enchantment) {
+    public Sword(Enchantment enchantment) {
         this.enchantment = enchantment;
     }
 
     @Override
     public void wield() {
-        LOGGER.info("The hammer is wielded.");
+        LOGGER.info("The sword is wielded.");
         enchantment.onActivate();
     }
 
     @Override
     public void swing() {
-        LOGGER.info("The hammer is swinged.");
+        LOGGER.info("The sword is swinged.");
         enchantment.apply();
     }
 
     @Override
     public void unwield() {
-        LOGGER.info("The hammer is unwielded.");
+        LOGGER.info("The sword is unwielded.");
         enchantment.onDeactivate();
     }
 

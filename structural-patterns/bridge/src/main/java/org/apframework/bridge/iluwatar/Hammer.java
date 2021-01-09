@@ -20,30 +20,46 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.bridge;
+package org.apframework.bridge.iluwatar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * SoulEatingEnchantment
+ *
+ * Hammer
+ *
  */
-public class SoulEatingEnchantment implements Enchantment {
+public class Hammer implements Weapon {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SoulEatingEnchantment.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Hammer.class);
 
-    @Override
-    public void onActivate() {
-        LOGGER.info("The item spreads bloodlust.");
+    private final Enchantment enchantment;
+
+    public Hammer(Enchantment enchantment) {
+        this.enchantment = enchantment;
     }
 
     @Override
-    public void apply() {
-        LOGGER.info("The item eats the soul of enemies.");
+    public void wield() {
+        LOGGER.info("The hammer is wielded.");
+        enchantment.onActivate();
     }
 
     @Override
-    public void onDeactivate() {
-        LOGGER.info("Bloodlust slowly disappears.");
+    public void swing() {
+        LOGGER.info("The hammer is swinged.");
+        enchantment.apply();
+    }
+
+    @Override
+    public void unwield() {
+        LOGGER.info("The hammer is unwielded.");
+        enchantment.onDeactivate();
+    }
+
+    @Override
+    public Enchantment getEnchantment() {
+        return enchantment;
     }
 }

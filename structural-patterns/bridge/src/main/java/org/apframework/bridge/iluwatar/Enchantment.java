@@ -20,32 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.bridge;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package org.apframework.bridge.iluwatar;
 
 /**
  *
- * FlyingEnchantment
+ * Enchantment
  *
  */
-public class FlyingEnchantment implements Enchantment {
+public interface Enchantment {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FlyingEnchantment.class);
+    void onActivate();
 
-    @Override
-    public void onActivate() {
-        LOGGER.info("The item begins to glow faintly.");
-    }
+    void apply();
 
-    @Override
-    public void apply() {
-        LOGGER.info("The item flies and strikes the enemies finally returning to owner's hand.");
-    }
-
-    @Override
-    public void onDeactivate() {
-        LOGGER.info("The item's glow fades.");
-    }
+    void onDeactivate();
 }

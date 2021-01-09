@@ -13,6 +13,7 @@
 
     <modules>
         <module>adapter</module>
+        <module>bridge</module>
     </modules>
 
 </project>

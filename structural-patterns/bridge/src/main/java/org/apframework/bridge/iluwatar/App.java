@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.bridge;
+package org.apframework.bridge.iluwatar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -68,7 +68,6 @@
         <module>strategy</module>
         <module>chain</module>
         <module>visitor</module>
-        <module>bridge</module>
         <module>decorator</module>
         <module>composite</module>
         <module>facade</module>

@@ -20,20 +20,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.bridge;
+package org.apframework.bridge.iluwatar;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- *
- * Weapon
- *
+ * SoulEatingEnchantment
  */
-public interface Weapon {
+public class SoulEatingEnchantment implements Enchantment {
 
-    void wield();
+    private static final Logger LOGGER = LoggerFactory.getLogger(SoulEatingEnchantment.class);
 
-    void swing();
+    @Override
+    public void onActivate() {
+        LOGGER.info("The item spreads bloodlust.");
+    }
 
-    void unwield();
+    @Override
+    public void apply() {
+        LOGGER.info("The item eats the soul of enemies.");
+    }
 
-    Enchantment getEnchantment();
+    @Override
+    public void onDeactivate() {
+        LOGGER.info("Bloodlust slowly disappears.");
+    }
 }
