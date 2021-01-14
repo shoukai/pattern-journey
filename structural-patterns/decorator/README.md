@@ -8,7 +8,7 @@
 
 ### 装饰器模式类图：
 
-![](./etc/decorator.jpg)
+![](etc/decorator.jpg)
 
 Component：定义一个对象接口，可以给这些对象动态添加职责。真实对象和装饰者对象有相同的接口，这样客户端不用知道内部有装饰者对象（Decorator）
 
