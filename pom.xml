@@ -69,7 +69,6 @@
         <module>chain</module>
         <module>visitor</module>
         <module>decorator</module>
-        <module>composite</module>
         <module>facade</module>
         <module>flyweight</module>
         <module>proxy</module>
