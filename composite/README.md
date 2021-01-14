@@ -18,6 +18,10 @@ Compostie（容器构件）：容器构件，该节点下还有其他子节点�
 
 Component（抽象构件）：抽象构件中定义了叶子和容器构件的共同点。比如，有公共的添加删除叶子功能，有显示节点功能。
 
+### 结构图
+
+![](http://cdn.apframework.com/8f4980a9dad5a6d579e599ac00eacb2b.jpg)
+
 ### 参考
 
 * [Java23种设计模式学习笔记](http://www.cnblogs.com/meet/p/5116504.html)

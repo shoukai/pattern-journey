@@ -20,28 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.composite;
-
-import java.util.List;
+package org.apframework.composite.iluwatar;
 
 /**
  *
- * Word
+ * Letter
  *
  */
-public class Word extends LetterComposite {
+public class Letter extends LetterComposite {
 
-    /**
-     * Constructor
-     */
-    public Word(List<Letter> letters) {
-        for (Letter l : letters) {
-            this.add(l);
-        }
+    private char c;
+
+    public Letter(char c) {
+        this.c = c;
     }
 
     @Override
     protected void printThisBefore() {
-        System.out.print(" ");
+        System.out.print(c);
     }
 }
