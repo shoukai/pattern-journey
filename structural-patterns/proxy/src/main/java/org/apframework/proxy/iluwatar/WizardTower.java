@@ -20,37 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.proxy;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package org.apframework.proxy.iluwatar;
 
 /**
- *
- * The proxy controlling access to the {@link IvoryTower}.
- *
+ * WizardTower interface
  */
-public class WizardTowerProxy implements WizardTower {
+public interface WizardTower {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WizardTowerProxy.class);
-
-    private static final int NUM_WIZARDS_ALLOWED = 3;
-
-    private int numWizards;
-
-    private final WizardTower tower;
-
-    public WizardTowerProxy(WizardTower tower) {
-        this.tower = tower;
-    }
-
-    @Override
-    public void enter(Wizard wizard) {
-        if (numWizards < NUM_WIZARDS_ALLOWED) {
-            tower.enter(wizard);
-            numWizards++;
-        } else {
-            LOGGER.info("{} is not allowed to enter!", wizard);
-        }
-    }
+    void enter(Wizard wizard);
 }

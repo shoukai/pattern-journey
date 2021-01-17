@@ -22,6 +22,10 @@ CGLIB
 
 ASM（底层使用指令，可维护性较差）
 
+### 结构图
+
+![](http://cdn.apframework.com/3604a1852d60fd1e509b31993900e4d8.jpg)
+
 ### 参考
 
 * [Java23种设计模式学习笔记](https://www.cnblogs.com/cxxjohnson/p/6403835.html)
