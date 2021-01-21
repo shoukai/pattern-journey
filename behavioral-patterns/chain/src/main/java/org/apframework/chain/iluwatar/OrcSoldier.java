@@ -20,15 +20,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.chain;
+package org.apframework.chain.iluwatar;
 
 /**
  *
- * RequestType enumeration
+ * OrcSoldier
  *
  */
-public enum RequestType {
+public class OrcSoldier extends RequestHandler {
 
-    DEFEND_CASTLE, TORTURE_PRISONER, COLLECT_TAX
+    public OrcSoldier(RequestHandler handler) {
+        super(handler);
+    }
 
+    @Override
+    public void handleRequest(Request req) {
+        if (req.getRequestType().equals(RequestType.COLLECT_TAX)) {
+            printHandling(req);
+            req.markHandled();
+        } else {
+            super.handleRequest(req);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Orc soldier";
+    }
 }

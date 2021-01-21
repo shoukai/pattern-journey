@@ -20,39 +20,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.chain;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package org.apframework.chain.iluwatar;
 
 /**
  *
- * RequestHandler
+ * The Chain of Responsibility pattern is a design pattern consisting of command objects and a
+ * series of processing objects. Each processing object contains logic that defines the types of
+ * command objects that it can handle; the rest are passed to the next processing object in the
+ * chain. A mechanism also exists for adding new processing objects to the end of this chain.
+ * <p>
+ * In this example we organize the request handlers ({@link RequestHandler}) into a chain where each
+ * handler has a chance to act on the request on its turn. Here the king ({@link OrcKing}) makes
+ * requests and the military orcs ({@link OrcCommander}, {@link OrcOfficer}, {@link OrcSoldier})
+ * form the handler chain.
  *
  */
-public abstract class RequestHandler {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(RequestHandler.class);
-
-    private RequestHandler next;
-
-    public RequestHandler(RequestHandler next) {
-        this.next = next;
-    }
+public class App {
 
     /**
-     * Request handler
+     * Program entry point
+     *
+     * @param args command line args
      */
-    public void handleRequest(Request req) {
-        if (next != null) {
-            next.handleRequest(req);
-        }
-    }
+    public static void main(String[] args) {
 
-    protected void printHandling(Request req) {
-        LOGGER.info("{} handling request \"{}\"", this, req);
-    }
+        OrcKing king = new OrcKing();
+        king.makeRequest(new Request(RequestType.DEFEND_CASTLE, "defend castle"));
+        king.makeRequest(new Request(RequestType.TORTURE_PRISONER, "torture prisoner"));
+        king.makeRequest(new Request(RequestType.COLLECT_TAX, "collect tax"));
 
-    @Override
-    public abstract String toString();
+    }
 }

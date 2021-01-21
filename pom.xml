@@ -54,6 +54,7 @@
     <modules>
         <module>creational-patterns</module>
         <module>structural-patterns</module>
+        <module>behavioral-patterns</module>
 
         <module>reactor</module>
         <module>native</module>

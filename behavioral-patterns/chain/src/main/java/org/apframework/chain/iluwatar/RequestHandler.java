@@ -20,31 +20,39 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.chain;
+package org.apframework.chain.iluwatar;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
- * OrcCommander
+ * RequestHandler
  *
  */
-public class OrcCommander extends RequestHandler {
+public abstract class RequestHandler {
 
-    public OrcCommander(RequestHandler handler) {
-        super(handler);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestHandler.class);
+
+    private RequestHandler next;
+
+    public RequestHandler(RequestHandler next) {
+        this.next = next;
     }
 
-    @Override
+    /**
+     * Request handler
+     */
     public void handleRequest(Request req) {
-        if (req.getRequestType().equals(RequestType.DEFEND_CASTLE)) {
-            printHandling(req);
-            req.markHandled();
-        } else {
-            super.handleRequest(req);
+        if (next != null) {
+            next.handleRequest(req);
         }
     }
 
-    @Override
-    public String toString() {
-        return "Orc commander";
+    protected void printHandling(Request req) {
+        LOGGER.info("{} handling request \"{}\"", this, req);
     }
+
+    @Override
+    public abstract String toString();
 }
