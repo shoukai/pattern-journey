@@ -1,4 +1,4 @@
-package org.apframework.cnblog;
+package org.apframework.ap;
 
 //接收者：真正执行命令的对象
 public class Receiver {

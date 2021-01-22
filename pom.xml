@@ -59,7 +59,6 @@
         <module>reactor</module>
         <module>native</module>
         <module>template-method</module>
-        <module>command</module>
         <module>iterator</module>
         <module>observer</module>
         <module>mediator</module>
@@ -67,7 +66,6 @@
         <module>interpreter</module>
         <module>state</module>
         <module>strategy</module>
-        <module>chain</module>
         <module>visitor</module>
         <module>inverted-index</module>
         <module>async-method-invocation</module>
