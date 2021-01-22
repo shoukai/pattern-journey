@@ -20,31 +20,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.interpreter;
+package org.apframework.interpreter.expression;
+
+import org.apframework.interpreter.Expression;
 
 /**
  *
- * MinusExpression
+ * NumberExpression
  *
  */
-public class MinusExpression extends Expression {
+public class NumberExpression extends Expression {
 
-    private Expression leftExpression;
-    private Expression rightExpression;
+    private int number;
 
-    public MinusExpression(Expression leftExpression, Expression rightExpression) {
-        this.leftExpression = leftExpression;
-        this.rightExpression = rightExpression;
+    public NumberExpression(int number) {
+        this.number = number;
+    }
+
+    public NumberExpression(String s) {
+        this.number = Integer.parseInt(s);
     }
 
     @Override
     public int interpret() {
-        return leftExpression.interpret() - rightExpression.interpret();
+        return number;
     }
 
     @Override
     public String toString() {
-        return "-";
+        return "number";
     }
-
 }

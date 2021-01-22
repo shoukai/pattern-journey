@@ -20,31 +20,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.interpreter;
+package org.apframework.interpreter.expression;
+
+import org.apframework.interpreter.Expression;
 
 /**
  *
- * MultiplyExpression
+ * PlusExpression
  *
  */
-public class MultiplyExpression extends Expression {
+public class PlusExpression extends Expression {
 
     private Expression leftExpression;
     private Expression rightExpression;
 
-    public MultiplyExpression(Expression leftExpression, Expression rightExpression) {
+    public PlusExpression(Expression leftExpression, Expression rightExpression) {
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
     }
 
     @Override
     public int interpret() {
-        return leftExpression.interpret() * rightExpression.interpret();
+        return leftExpression.interpret() + rightExpression.interpret();
     }
 
     @Override
     public String toString() {
-        return "*";
+        return "+";
     }
-
 }
