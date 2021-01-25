@@ -20,48 +20,57 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.iterator;
+package org.apframework.iterator.iluwatar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * TreasureChest, the collection class.
- *
+ * TreasureChestItemIterator
  */
-public class TreasureChest {
+public class TreasureChestItemIterator implements ItemIterator {
 
-    private List<Item> items;
+    private TreasureChest chest;
+    private int idx;
+    private ItemType type;
 
     /**
      * Constructor
      */
-    public TreasureChest() {
-        items = new ArrayList<>();
-        items.add(new Item(ItemType.POTION, "Potion of courage"));
-        items.add(new Item(ItemType.RING, "Ring of shadows"));
-        items.add(new Item(ItemType.POTION, "Potion of wisdom"));
-        items.add(new Item(ItemType.POTION, "Potion of blood"));
-        items.add(new Item(ItemType.WEAPON, "Sword of silver +1"));
-        items.add(new Item(ItemType.POTION, "Potion of rust"));
-        items.add(new Item(ItemType.POTION, "Potion of healing"));
-        items.add(new Item(ItemType.RING, "Ring of armor"));
-        items.add(new Item(ItemType.WEAPON, "Steel halberd"));
-        items.add(new Item(ItemType.WEAPON, "Dagger of poison"));
+    public TreasureChestItemIterator(TreasureChest chest, ItemType type) {
+        this.chest = chest;
+        this.type = type;
+        this.idx = -1;
     }
 
-    ItemIterator iterator(ItemType itemType) {
-        return new TreasureChestItemIterator(this, itemType);
+    @Override
+    public boolean hasNext() {
+        return findNextIdx() != -1;
     }
 
-    /**
-     * Get all items
-     */
-    public List<Item> getItems() {
-        List<Item> list = new ArrayList<>();
-        list.addAll(items);
-        return list;
+    @Override
+    public Item next() {
+        idx = findNextIdx();
+        if (idx != -1) {
+            return chest.getItems().get(idx);
+        }
+        return null;
     }
 
+    private int findNextIdx() {
+
+        List<Item> items = chest.getItems();
+        boolean found = false;
+        int tempIdx = idx;
+        while (!found) {
+            tempIdx++;
+            if (tempIdx >= items.size()) {
+                tempIdx = -1;
+                break;
+            }
+            if (type.equals(ItemType.ANY) || items.get(tempIdx).getType().equals(type)) {
+                break;
+            }
+        }
+        return tempIdx;
+    }
 }

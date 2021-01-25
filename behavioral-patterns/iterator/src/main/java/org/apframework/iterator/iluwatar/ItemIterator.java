@@ -20,33 +20,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.iterator;
+package org.apframework.iterator.iluwatar;
 
 /**
  *
- * Item
+ * ItemIterator interface.
  *
  */
-public class Item {
+public interface ItemIterator {
 
-    private ItemType type;
-    private String name;
+    boolean hasNext();
 
-    public Item(ItemType type, String name) {
-        this.setType(type);
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return name;
-    }
-
-    public ItemType getType() {
-        return type;
-    }
-
-    public final void setType(ItemType type) {
-        this.type = type;
-    }
+    Item next();
 }

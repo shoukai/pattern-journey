@@ -20,15 +20,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.iterator;
+package org.apframework.iterator.iluwatar;
 
 /**
  *
- * ItemType enumeration
+ * Item
  *
  */
-public enum ItemType {
+public class Item {
 
-    ANY, WEAPON, RING, POTION
+    private ItemType type;
+    private String name;
 
+    public Item(ItemType type, String name) {
+        this.setType(type);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public ItemType getType() {
+        return type;
+    }
+
+    public final void setType(ItemType type) {
+        this.type = type;
+    }
 }
