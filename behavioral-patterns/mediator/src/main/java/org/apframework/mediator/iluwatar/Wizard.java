@@ -20,42 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.mediator;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package org.apframework.mediator.iluwatar;
 
 /**
  *
- * Abstract base class for party members.
+ * Wizard party member.
  *
  */
-public abstract class PartyMemberBase implements PartyMember {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(PartyMemberBase.class);
-
-    protected Party party;
+public class Wizard extends PartyMemberBase {
 
     @Override
-    public void joinedParty(Party party) {
-        LOGGER.info("{} joins the party", this);
-        this.party = party;
+    public String toString() {
+        return "Wizard";
     }
-
-    @Override
-    public void partyAction(Action action) {
-        LOGGER.info("{} {}", this, action.getDescription());
-    }
-
-    @Override
-    public void act(Action action) {
-        if (party != null) {
-            LOGGER.info("{} {}", this, action);
-            party.act(this, action);
-        }
-    }
-
-    @Override
-    public abstract String toString();
 
 }

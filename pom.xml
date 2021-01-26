@@ -60,7 +60,6 @@
         <module>native</module>
         <module>template-method</module>
         <module>observer</module>
-        <module>mediator</module>
         <module>memento</module>
         <module>state</module>
         <module>strategy</module>

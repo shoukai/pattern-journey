@@ -20,17 +20,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.mediator;
+package org.apframework.mediator.iluwatar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
- * Hunter party member.
+ * Party implementation.
  *
  */
-public class Hunter extends PartyMemberBase {
+public class PartyImpl implements Party {
+
+    private final List<PartyMember> members;
+
+    public PartyImpl() {
+        members = new ArrayList<>();
+    }
 
     @Override
-    public String toString() {
-        return "Hunter";
+    public void act(PartyMember actor, Action action) {
+        for (PartyMember member : members) {
+            if (!member.equals(actor)) {
+                member.partyAction(action);
+            }
+        }
+    }
+
+    @Override
+    public void addMember(PartyMember member) {
+        members.add(member);
+        member.joinedParty(this);
     }
 }

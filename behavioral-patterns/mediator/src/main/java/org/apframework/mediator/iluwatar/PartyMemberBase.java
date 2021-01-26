@@ -20,36 +20,42 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.mediator;
+package org.apframework.mediator.iluwatar;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
- * Party implementation.
+ * Abstract base class for party members.
  *
  */
-public class PartyImpl implements Party {
+public abstract class PartyMemberBase implements PartyMember {
 
-    private final List<PartyMember> members;
+    private static final Logger LOGGER = LoggerFactory.getLogger(PartyMemberBase.class);
 
-    public PartyImpl() {
-        members = new ArrayList<>();
+    protected Party party;
+
+    @Override
+    public void joinedParty(Party party) {
+        LOGGER.info("{} joins the party", this);
+        this.party = party;
     }
 
     @Override
-    public void act(PartyMember actor, Action action) {
-        for (PartyMember member : members) {
-            if (!member.equals(actor)) {
-                member.partyAction(action);
-            }
+    public void partyAction(Action action) {
+        LOGGER.info("{} {}", this, action.getDescription());
+    }
+
+    @Override
+    public void act(Action action) {
+        if (party != null) {
+            LOGGER.info("{} {}", this, action);
+            party.act(this, action);
         }
     }
 
     @Override
-    public void addMember(PartyMember member) {
-        members.add(member);
-        member.joinedParty(this);
-    }
+    public abstract String toString();
+
 }

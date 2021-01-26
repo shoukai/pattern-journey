@@ -20,18 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.mediator;
+package org.apframework.mediator.iluwatar;
 
 /**
  *
- * Wizard party member.
+ * Hobbit party member.
  *
  */
-public class Wizard extends PartyMemberBase {
+public class Hobbit extends PartyMemberBase {
 
     @Override
     public String toString() {
-        return "Wizard";
+        return "Hobbit";
     }
 
 }

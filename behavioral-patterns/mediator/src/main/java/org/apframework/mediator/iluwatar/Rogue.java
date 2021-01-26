@@ -20,17 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.mediator;
+package org.apframework.mediator.iluwatar;
 
 /**
  *
- * Party interface.
+ * Rogue party member.
  *
  */
-public interface Party {
+public class Rogue extends PartyMemberBase {
 
-    void addMember(PartyMember member);
-
-    void act(PartyMember actor, Action action);
+    @Override
+    public String toString() {
+        return "Rogue";
+    }
 
 }
