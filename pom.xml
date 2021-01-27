@@ -60,7 +60,7 @@
         <module>native</module>
         <module>template-method</module>
 
-        <module>memento</module>
+
         <module>state</module>
         <module>strategy</module>
         <module>visitor</module>
