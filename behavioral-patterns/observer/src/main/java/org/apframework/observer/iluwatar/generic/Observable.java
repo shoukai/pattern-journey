@@ -20,37 +20,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer;
+package org.apframework.observer.iluwatar.generic;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
+ * Generic observer inspired by Java Generics and Collection by Naftalin & Wadler
  *
- * Orcs
- *
+ * @param <S> Subject
+ * @param <O> Observer
+ * @param <A> Argument type
  */
-public class Orcs implements WeatherObserver {
+public abstract class Observable<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Orcs.class);
+    protected List<O> observers;
 
-    @Override
-    public void update(WeatherType currentWeather) {
-        switch (currentWeather) {
-            case COLD:
-                LOGGER.info("The orcs are freezing cold.");
-                break;
-            case RAINY:
-                LOGGER.info("The orcs are dripping wet.");
-                break;
-            case SUNNY:
-                LOGGER.info("The sun hurts the orcs' eyes.");
-                break;
-            case WINDY:
-                LOGGER.info("The orc smell almost vanishes in the wind.");
-                break;
-            default:
-                break;
+    public Observable() {
+        this.observers = new CopyOnWriteArrayList<>();
+    }
+
+    public void addObserver(O observer) {
+        this.observers.add(observer);
+    }
+
+    public void removeObserver(O observer) {
+        this.observers.remove(observer);
+    }
+
+    /**
+     * Notify observers
+     */
+    @SuppressWarnings("unchecked")
+    public void notifyObservers(A argument) {
+        for (O observer : observers) {
+            observer.update((S) this, argument);
         }
     }
 }

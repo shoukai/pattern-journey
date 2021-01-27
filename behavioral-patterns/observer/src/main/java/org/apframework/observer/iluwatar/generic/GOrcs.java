@@ -20,35 +20,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer.generic;
+package org.apframework.observer.iluwatar.generic;
 
-import org.apframework.observer.WeatherType;
+import org.apframework.observer.iluwatar.WeatherType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  *
- * GHobbits
+ * GOrcs
  *
  */
-public class GHobbits implements Race {
+public class GOrcs implements Race {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GHobbits.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GOrcs.class);
 
     @Override
     public void update(GWeather weather, WeatherType weatherType) {
         switch (weatherType) {
             case COLD:
-                LOGGER.info("The hobbits are shivering in the cold weather.");
+                LOGGER.info("The orcs are freezing cold.");
                 break;
             case RAINY:
-                LOGGER.info("The hobbits look for cover from the rain.");
+                LOGGER.info("The orcs are dripping wet.");
                 break;
             case SUNNY:
-                LOGGER.info("The happy hobbits bade in the warm sun.");
+                LOGGER.info("The sun hurts the orcs' eyes.");
                 break;
             case WINDY:
-                LOGGER.info("The hobbits hold their hats tightly in the windy weather.");
+                LOGGER.info("The orc smell almost vanishes in the wind.");
                 break;
             default:
                 break;

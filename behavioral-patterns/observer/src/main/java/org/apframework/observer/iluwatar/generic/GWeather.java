@@ -20,38 +20,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer.generic;
+package org.apframework.observer.iluwatar.generic;
 
-import org.apframework.observer.WeatherType;
+import org.apframework.observer.iluwatar.WeatherType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
- * GOrcs
- *
+ * GWeather
  */
-public class GOrcs implements Race {
+public class GWeather extends Observable<GWeather, Race, WeatherType> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GOrcs.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GWeather.class);
 
-    @Override
-    public void update(GWeather weather, WeatherType weatherType) {
-        switch (weatherType) {
-            case COLD:
-                LOGGER.info("The orcs are freezing cold.");
-                break;
-            case RAINY:
-                LOGGER.info("The orcs are dripping wet.");
-                break;
-            case SUNNY:
-                LOGGER.info("The sun hurts the orcs' eyes.");
-                break;
-            case WINDY:
-                LOGGER.info("The orc smell almost vanishes in the wind.");
-                break;
-            default:
-                break;
-        }
+    private WeatherType currentWeather;
+
+    public GWeather() {
+        currentWeather = WeatherType.SUNNY;
+    }
+
+    /**
+     * Makes time pass for weather
+     */
+    public void timePasses() {
+        WeatherType[] enumValues = WeatherType.values();
+        currentWeather = enumValues[(currentWeather.ordinal() + 1) % enumValues.length];
+        LOGGER.info("The weather changed to {}.", currentWeather);
+        notifyObservers(currentWeather);
     }
 }

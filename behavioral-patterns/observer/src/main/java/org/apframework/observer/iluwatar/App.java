@@ -20,11 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer;
+package org.apframework.observer.iluwatar;
 
-import org.apframework.observer.generic.GHobbits;
-import org.apframework.observer.generic.GOrcs;
-import org.apframework.observer.generic.GWeather;
+import org.apframework.observer.iluwatar.generic.GHobbits;
+import org.apframework.observer.iluwatar.generic.GOrcs;
+import org.apframework.observer.iluwatar.generic.GWeather;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

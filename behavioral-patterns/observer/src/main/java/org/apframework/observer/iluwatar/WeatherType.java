@@ -20,13 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer.generic;
-
-
-import org.apframework.observer.WeatherType;
+package org.apframework.observer.iluwatar;
 
 /**
- * Race
+ *
+ * WeatherType enumeration
+ *
  */
-public interface Race extends Observer<GWeather, Race, WeatherType> {
+public enum WeatherType {
+
+    SUNNY, RAINY, WINDY, COLD;
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase();
+    }
 }

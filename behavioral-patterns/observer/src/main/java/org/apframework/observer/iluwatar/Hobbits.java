@@ -20,32 +20,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer.generic;
+package org.apframework.observer.iluwatar;
 
-import org.apframework.observer.WeatherType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GWeather
+ *
+ * Hobbits
+ *
  */
-public class GWeather extends Observable<GWeather, Race, WeatherType> {
+public class Hobbits implements WeatherObserver {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GWeather.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Hobbits.class);
 
-    private WeatherType currentWeather;
-
-    public GWeather() {
-        currentWeather = WeatherType.SUNNY;
-    }
-
-    /**
-     * Makes time pass for weather
-     */
-    public void timePasses() {
-        WeatherType[] enumValues = WeatherType.values();
-        currentWeather = enumValues[(currentWeather.ordinal() + 1) % enumValues.length];
-        LOGGER.info("The weather changed to {}.", currentWeather);
-        notifyObservers(currentWeather);
+    @Override
+    public void update(WeatherType currentWeather) {
+        switch (currentWeather) {
+            case COLD:
+                LOGGER.info("The hobbits are shivering in the cold weather.");
+                break;
+            case RAINY:
+                LOGGER.info("The hobbits look for cover from the rain.");
+                break;
+            case SUNNY:
+                LOGGER.info("The happy hobbits bade in the warm sun.");
+                break;
+            case WINDY:
+                LOGGER.info("The hobbits hold their hats tightly in the windy weather.");
+                break;
+            default:
+                break;
+        }
     }
 }

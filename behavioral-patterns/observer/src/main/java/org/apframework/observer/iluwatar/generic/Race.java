@@ -20,16 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.observer.generic;
+package org.apframework.observer.iluwatar.generic;
+
+
+import org.apframework.observer.iluwatar.WeatherType;
 
 /**
- * Observer
- *
- * @param <S> Observable
- * @param <O> Observer
- * @param <A> Action
+ * Race
  */
-public interface Observer<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
-
-    void update(S subject, A argument);
+public interface Race extends Observer<GWeather, Race, WeatherType> {
 }
