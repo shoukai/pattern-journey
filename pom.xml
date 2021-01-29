@@ -61,7 +61,7 @@
         <module>template-method</module>
 
 
-        <module>state</module>
+
         <module>strategy</module>
         <module>visitor</module>
         <module>inverted-index</module>

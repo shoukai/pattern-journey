@@ -20,34 +20,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.state;
+package org.apframework.state.iluwatar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  *
- * Peaceful state.
+ * Angry state.
  *
  */
-public class PeacefulState implements State {
+public class AngryState implements State {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(PeacefulState.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AngryState.class);
 
     private Mammoth mammoth;
 
-    public PeacefulState(Mammoth mammoth) {
+    public AngryState(Mammoth mammoth) {
         this.mammoth = mammoth;
     }
 
     @Override
     public void observe() {
-        LOGGER.info("{} is calm and peaceful.", mammoth);
+        LOGGER.info("{} is furious!", mammoth);
     }
 
     @Override
     public void onEnterState() {
-        LOGGER.info("{} calms down.", mammoth);
+        LOGGER.info("{} gets angry!", mammoth);
     }
 
 }
