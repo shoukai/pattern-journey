@@ -62,7 +62,7 @@
 
 
 
-        <module>strategy</module>
+
         <module>visitor</module>
         <module>inverted-index</module>
         <module>async-method-invocation</module>

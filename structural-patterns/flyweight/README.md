@@ -131,7 +131,3 @@ true
 * [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
 * [享元模式_百度百科](https://baike.baidu.com/item/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/10541959)
 * [Flyweight](http://java-design-patterns.com/patterns/flyweight/)
-
-
-
-#技术/设计模式

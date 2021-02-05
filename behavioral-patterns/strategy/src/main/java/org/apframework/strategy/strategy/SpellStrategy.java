@@ -20,20 +20,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.strategy;
+package org.apframework.strategy.strategy;
 
+import org.apframework.strategy.DragonSlayingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Projectile strategy.
+ *
+ * Spell strategy.
+ *
  */
-public class ProjectileStrategy implements DragonSlayingStrategy {
+public class SpellStrategy implements DragonSlayingStrategy {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ProjectileStrategy.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpellStrategy.class);
 
     @Override
     public void execute() {
-        LOGGER.info("You shoot the dragon with the magical crossbow and it falls dead on the ground!");
+        LOGGER.info("You cast the spell of disintegration and the dragon vaporizes in a pile of dust!");
     }
+
 }

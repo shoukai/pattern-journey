@@ -22,6 +22,9 @@
  */
 package org.apframework.strategy;
 
+import org.apframework.strategy.strategy.MeleeStrategy;
+import org.apframework.strategy.strategy.ProjectileStrategy;
+import org.apframework.strategy.strategy.SpellStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

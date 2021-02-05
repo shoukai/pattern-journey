@@ -10,7 +10,7 @@
 
 其实内部就是定义了一个算法家族，给每个会员或者商品都指定一个特定的算法，根据不同的算法，打不同的折扣。
 
-![alt text](./etc/strategy_1.png "Strategy")
+![alt text](etc/strategy_1.png "Strategy")
 
 Java 8 代码
 
