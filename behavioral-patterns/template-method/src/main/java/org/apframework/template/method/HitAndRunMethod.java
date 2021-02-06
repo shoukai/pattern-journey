@@ -20,28 +20,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.template;
+package org.apframework.template.method;
+
+import org.apframework.template.StealingMethod;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
- * Template Method defines a skeleton for an algorithm. The algorithm subclasses provide
- * implementation for the blank parts.
- * <p>
- * In this example {@link HalflingThief} contains {@link StealingMethod} that can be changed. First
- * the thief hits with {@link HitAndRunMethod} and then with {@link SubtleMethod}.
+ * HitAndRunMethod implementation of {@link StealingMethod}.
  *
  */
-public class App {
+public class HitAndRunMethod extends StealingMethod {
 
-    /**
-     * Program entry point
-     *
-     * @param args command line args
-     */
-    public static void main(String[] args) {
-        HalflingThief thief = new HalflingThief(new HitAndRunMethod());
-        thief.steal();
-        thief.changeMethod(new SubtleMethod());
-        thief.steal();
+    private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
+
+    @Override
+    protected String pickTarget() {
+        return "old goblin woman";
+    }
+
+    @Override
+    protected void confuseTarget(String target) {
+        LOGGER.info("Approach the {} from behind.", target);
+    }
+
+    @Override
+    protected void stealTheItem(String target) {
+        LOGGER.info("Grab the handbag and run away fast!");
     }
 }

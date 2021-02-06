@@ -20,32 +20,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.template;
+package org.apframework.template.method;
 
+import org.apframework.template.StealingMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  *
- * HitAndRunMethod implementation of {@link StealingMethod}.
+ * SubtleMethod implementation of {@link StealingMethod}.
  *
  */
-public class HitAndRunMethod extends StealingMethod {
+public class SubtleMethod extends StealingMethod {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SubtleMethod.class);
 
     @Override
     protected String pickTarget() {
-        return "old goblin woman";
+        return "shop keeper";
     }
 
     @Override
     protected void confuseTarget(String target) {
-        LOGGER.info("Approach the {} from behind.", target);
+        LOGGER.info("Approach the {} with tears running and hug him!", target);
     }
 
     @Override
     protected void stealTheItem(String target) {
-        LOGGER.info("Grab the handbag and run away fast!");
+        LOGGER.info("While in close contact grab the {}'s wallet.", target);
     }
 }

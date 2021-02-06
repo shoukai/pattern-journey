@@ -22,30 +22,29 @@
  */
 package org.apframework.template;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apframework.template.method.HitAndRunMethod;
+import org.apframework.template.method.SubtleMethod;
 
 /**
  *
- * SubtleMethod implementation of {@link StealingMethod}.
+ * Template Method defines a skeleton for an algorithm. The algorithm subclasses provide
+ * implementation for the blank parts.
+ * <p>
+ * In this example {@link HalflingThief} contains {@link StealingMethod} that can be changed. First
+ * the thief hits with {@link HitAndRunMethod} and then with {@link SubtleMethod}.
  *
  */
-public class SubtleMethod extends StealingMethod {
+public class App {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SubtleMethod.class);
-
-    @Override
-    protected String pickTarget() {
-        return "shop keeper";
-    }
-
-    @Override
-    protected void confuseTarget(String target) {
-        LOGGER.info("Approach the {} with tears running and hug him!", target);
-    }
-
-    @Override
-    protected void stealTheItem(String target) {
-        LOGGER.info("While in close contact grab the {}'s wallet.", target);
+    /**
+     * Program entry point
+     *
+     * @param args command line args
+     */
+    public static void main(String[] args) {
+        HalflingThief thief = new HalflingThief(new HitAndRunMethod());
+        thief.steal();
+        thief.changeMethod(new SubtleMethod());
+        thief.steal();
     }
 }
