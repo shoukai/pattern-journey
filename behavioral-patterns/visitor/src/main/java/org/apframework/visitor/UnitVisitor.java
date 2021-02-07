@@ -22,30 +22,21 @@
  */
 package org.apframework.visitor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apframework.visitor.unit.Commander;
+import org.apframework.visitor.unit.Sergeant;
+import org.apframework.visitor.unit.Soldier;
 
 /**
  *
- * CommanderVisitor
+ * Visitor interface.
  *
  */
-public class CommanderVisitor implements UnitVisitor {
+public interface UnitVisitor {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CommanderVisitor.class);
+    void visitSoldier(Soldier soldier);
 
-    @Override
-    public void visitSoldier(Soldier soldier) {
-        // Do nothing
-    }
+    void visitSergeant(Sergeant sergeant);
 
-    @Override
-    public void visitSergeant(Sergeant sergeant) {
-        // Do nothing
-    }
+    void visitCommander(Commander commander);
 
-    @Override
-    public void visitCommander(Commander commander) {
-        LOGGER.info("Good to see you {}", commander);
-    }
 }

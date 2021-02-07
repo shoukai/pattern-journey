@@ -22,6 +22,13 @@
  */
 package org.apframework.visitor;
 
+import org.apframework.visitor.unit.Commander;
+import org.apframework.visitor.unit.Sergeant;
+import org.apframework.visitor.unit.Soldier;
+import org.apframework.visitor.visitor.CommanderVisitor;
+import org.apframework.visitor.visitor.SergeantVisitor;
+import org.apframework.visitor.visitor.SoldierVisitor;
+
 /**
  *
  * Visitor pattern defines mechanism to apply operations on nodes in hierarchy. New operations can

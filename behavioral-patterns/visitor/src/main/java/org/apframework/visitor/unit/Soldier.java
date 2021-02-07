@@ -20,25 +20,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.visitor;
+package org.apframework.visitor.unit;
+
+import org.apframework.visitor.Unit;
+import org.apframework.visitor.UnitVisitor;
 
 /**
- * Commander
+ *
+ * Soldier
+ *
  */
-public class Commander extends Unit {
+public class Soldier extends Unit {
 
-    public Commander(Unit... children) {
+    public Soldier(Unit... children) {
         super(children);
     }
 
     @Override
     public void accept(UnitVisitor visitor) {
-        visitor.visitCommander(this);
+        visitor.visitSoldier(this);
         super.accept(visitor);
     }
 
     @Override
     public String toString() {
-        return "commander";
+        return "soldier";
     }
 }

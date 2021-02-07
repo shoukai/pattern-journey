@@ -20,7 +20,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.visitor;
+package org.apframework.visitor.unit;
+
+import org.apframework.visitor.Unit;
+import org.apframework.visitor.UnitVisitor;
 
 /**
  *

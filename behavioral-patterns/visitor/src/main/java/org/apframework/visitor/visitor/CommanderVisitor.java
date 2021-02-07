@@ -20,19 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.apframework.visitor;
+package org.apframework.visitor.visitor;
 
+import org.apframework.visitor.UnitVisitor;
+import org.apframework.visitor.unit.Commander;
+import org.apframework.visitor.unit.Sergeant;
+import org.apframework.visitor.unit.Soldier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  *
- * SergeantVisitor
+ * CommanderVisitor
  *
  */
-public class SergeantVisitor implements UnitVisitor {
+public class CommanderVisitor implements UnitVisitor {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SergeantVisitor.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommanderVisitor.class);
 
     @Override
     public void visitSoldier(Soldier soldier) {
@@ -41,11 +45,11 @@ public class SergeantVisitor implements UnitVisitor {
 
     @Override
     public void visitSergeant(Sergeant sergeant) {
-        LOGGER.info("Hello {}", sergeant);
+        // Do nothing
     }
 
     @Override
     public void visitCommander(Commander commander) {
-        // Do nothing
+        LOGGER.info("Good to see you {}", commander);
     }
 }
